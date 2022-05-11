@@ -1,0 +1,17 @@
+{
+  "name": "xtremepush/magento2-extension",
+  "description": "Xtremepush extension for Magento 2",
+  "type": "magento2-module",
+  "verion": "0.0.1",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Xtremepush\\Module\\": ""
+    },
+    "config": {
+      "optimize-autoloader": true
+    }
+  }
+}
