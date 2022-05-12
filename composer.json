@@ -1,5 +1,5 @@
 {
-  "name": "xtremepush/magento2-extension",
+  "name": "xtremepush/lib-xp-magento2",
   "description": "Xtremepush extension for Magento 2",
   "type": "magento2-module",
   "verion": "0.0.1",
