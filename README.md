@@ -11,7 +11,7 @@ Use Xtremepush messaging capabilities with Magento
 - Create a new directory `/app/code/xtremepush`
 - Clone Xtremepush extension repository within this new directory
 - Inside root directory execute command `php -d memory_limit=-1 bin/magento setup:upgrade`
-- Module has been installed if `Xtremepush_Module` is listed in `/app/etc/config.php` 
-
+- After that execute UI update command `php bin/magento setup:static-content:deploy -f`
+- Module has been installed if `Xtremepush_Module` is listed in `/app/etc/config.php`
 
 ## Usage
