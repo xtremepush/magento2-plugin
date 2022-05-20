@@ -9,12 +9,13 @@ use Magento\Framework\App\Cache\Frontend\Pool;
 
 class ModuleConfig
 {
-    const PREFIX = 'xtremepush/';
-    const GROUP_GENERAL = 'general/';
-    const FIELD_XP_WEBHOOK_URL = 'xp_webhook_url';
-    const FIELD_XP_PROJECT_TITLE = 'xp_project_title';
-    const FIELD_XP_ACCESS_TOKEN = 'xp_access_token';
-    const FIELD_XP_ACTIVE = 'xp_active';
+    private const PREFIX = 'xtremepush_config/';
+    private const GROUP_GENERAL = 'general/';
+    private const FIELD_XP_WEBHOOK_URL = 'xp_webhook_url';
+    private const FIELD_XP_PROJECT_TITLE = 'xp_project_title';
+    private const FIELD_XP_ACCESS_TOKEN = 'xp_access_token';
+    private const FIELD_XP_ACTIVE = 'xp_active';
+    private const DOCUMENTATION_URL = 'documentation_url';
 
     /** @var ScopeConfigInterface */
     private $scopeConfig;
@@ -106,6 +107,14 @@ class ModuleConfig
     public function getXpProjectTitle()
     {
         return $this->scopeConfig->getValue(self::PREFIX . self::GROUP_GENERAL . self::FIELD_XP_PROJECT_TITLE);
+    }
+
+    /**
+     * @return string
+     */
+    public function getDocumentationUrl()
+    {
+        return $this->scopeConfig->getValue(self::PREFIX . self::GROUP_GENERAL . self::DOCUMENTATION_URL);
     }
 
     /**

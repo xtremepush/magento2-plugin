@@ -29,7 +29,8 @@ class ConfigurationController implements ConfigurationInterface
         $this->config->setXpProjectTitle($xpProjectTitle);
         $this->config->setXpAccessToken($xpAccessToken);
         $this->config->setXpWebhookUrl($xpWebhookUrl);
-        $this->config->setXpActive(1);
+        $this->config->setXpActive(0);
+        $this->config->cacheCleanAndFlush();
 
         return [compact(['xpProjectTitle', 'xpAccessToken', 'xpWebhookUrl'])];
     }
