@@ -9,8 +9,11 @@ use Xtremepush\Module\Api\SubscriptionInterface;
 
 class Subscription implements SubscriptionInterface
 {
-    protected SubscriptionManager $subscriptionManager;
-    protected CustomerFactory $customerFactory;
+    /** @var SubscriptionManager */
+    protected $subscriptionManager;
+
+    /** @var CustomerFactory */
+    protected $customerFactory;
 
     public function __construct(
         SubscriptionManager $subscriptionManager,

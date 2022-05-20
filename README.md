@@ -15,3 +15,7 @@ Use Xtremepush messaging capabilities with Magento
 - Module has been installed if `Xtremepush_Module` is listed in `/app/etc/config.php`
 
 ## Usage
+
+### Required Magento permissions:
+- Magento_Integration::integrations (System > System Extensions > System Integrations)
+- Magento_Newsletter::subscriber (Marketing > Communications > Newsletter Subscribers)
