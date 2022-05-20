@@ -9,7 +9,7 @@ use Xtremepush\Module\Model\ModuleConfig;
 
 class Instructions extends Field
 {
-    const INSTRUCTIONS_TEMPLATE = 'system/config/instructions.phtml';
+    private const INSTRUCTIONS_TEMPLATE = 'system/config/instructions.phtml';
 
     /** @var ModuleConfig */
     protected $config;
