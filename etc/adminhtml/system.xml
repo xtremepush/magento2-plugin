@@ -6,7 +6,7 @@
             <label>Xtremepush</label>
         </tab>
         <section id="xtremepush_config" translate="label" sortOrder="10" showInDefault="1" showInWebsite="0"
-                 showInStore="">
+                 showInStore="0">
             <class>separator-top</class>
             <label>General</label>
             <tab>xtremepush</tab>
