@@ -40,5 +40,29 @@
                 </field>
             </group>
         </section>
+        <section id="xtremepush_webhooks" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Webhooks</label>
+            <tab>xtremepush</tab>
+            <resource>Xtremepush_Module::xtremepush_general_config</resource>
+            <group id="webhooks" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>Webhooks</label>
+                <field id="webhook_quotes" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Quotes</label>
+                    <comment>Enable events for quote changes</comment>
+                    <source_model>Xtremepush\Module\Block\Adminhtml\System\Config\Form\Field\Yesno</source_model>
+                </field>
+                <field id="webhook_orders" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Orders</label>
+                    <comment>Enable events for order changes</comment>
+                    <source_model>Xtremepush\Module\Block\Adminhtml\System\Config\Form\Field\Yesno</source_model>
+                </field>
+                <field id="webhook_customers" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Customers</label>
+                    <comment>Enable events for customer changes</comment>
+                    <source_model>Xtremepush\Module\Block\Adminhtml\System\Config\Form\Field\Yesno</source_model>
+                </field>
+            </group>
+        </section>
     </system>
 </config>

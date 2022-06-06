@@ -14,8 +14,9 @@ Use Xtremepush messaging capabilities with Magento
 - After that execute UI update command `php bin/magento setup:static-content:deploy -f`
 - Module has been installed if `Xtremepush_Module` is listed in `/app/etc/config.php`
 
-## Usage
-
-### Required Magento permissions:
+## Required Magento permissions:
 - Magento_Integration::integrations (System > System Extensions > System Integrations)
 - Magento_Newsletter::subscriber (Marketing > Communications > Newsletter Subscribers)
+- Magento_Sales::actions_view (Sales > Operations > Orders > Actions > View)
+- Magento_Customer::customer (Customers)
+
