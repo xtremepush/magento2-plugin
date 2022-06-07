@@ -75,7 +75,7 @@ class Event
             case self::EVENT_CUSTOMER_QUOTE_UPDATED:
             case self::EVENT_ADMIN_QUOTE_COMPLETED:
             case self::EVENT_CUSTOMER_QUOTE_COMPLETED:
-                return 'webhook_quotes';
+                return ModuleConfig::WEBHOOK_QUOTES;
 
             case self::EVENT_ADMIN_ORDER_CREATED:
             case self::EVENT_CUSTOMER_ORDER_CREATED:
@@ -88,14 +88,14 @@ class Event
             case self::EVENT_ORDER_STATE_CANCELED:
             case self::EVENT_ORDER_STATE_HOLDED:
             case self::EVENT_ORDER_STATE_PAYMENT_REVIEW:
-                return 'webhook_orders';
+                return ModuleConfig::WEBHOOK_ORDERS;
 
             case self::EVENT_CUSTOMER_CUSTOMER_REGISTERED:
             case self::EVENT_ADMIN_CUSTOMER_CREATED:
             case self::EVENT_CUSTOMER_CUSTOMER_UPDATED:
             case self::EVENT_ADMIN_CUSTOMER_UPDATED:
             case self::EVENT_ADMIN_CUSTOMER_DELETED:
-                return 'webhook_customers';
+                return ModuleConfig::WEBHOOK_CUSTOMERS;
             default:
                 return '';
         }

@@ -86,11 +86,11 @@ class ModuleConfig
     }
 
     /**
-     * @return string|null
+     * @return bool
      */
     public function getXpActive()
     {
-        return $this->scopeConfig->getValue(self::PREFIX_GENERAL . self::GROUP_GENERAL . self::FIELD_XP_ACTIVE);
+        return (bool)$this->scopeConfig->getValue(self::PREFIX_GENERAL . self::GROUP_GENERAL . self::FIELD_XP_ACTIVE);
     }
 
     /**

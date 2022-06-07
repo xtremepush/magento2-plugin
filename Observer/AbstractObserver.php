@@ -50,6 +50,10 @@ abstract class AbstractObserver implements ObserverInterface
      */
     protected function isWebhookEnabled(string $event)
     {
+        if (!$this->config->getXpActive()) {
+            return false;
+        }
+
         $permission = Event::getPermissionByEvent($event);
         return $this->config->getWebhookSetting($permission);
     }
