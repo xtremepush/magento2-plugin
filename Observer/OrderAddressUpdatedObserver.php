@@ -40,7 +40,7 @@ class OrderAddressUpdatedObserver extends AbstractObserver
 
         $event = Event::EVENT_ADMIN_ORDERS_ADDRESS_UPDATED;
 
-        if ($order && $this->isWebhookEnabled($event)) {
+        if ($this->isWebhookEnabled($event)) {
             $this->webhookService->sendWebhook($event, $this->orderSerializer->toArray($order));
         }
         return $this;

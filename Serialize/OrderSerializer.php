@@ -15,15 +15,20 @@ class OrderSerializer
     /** @var OrderItemsSerializer */
     private $orderItemsSerializer;
 
+    /** @var OrderExtensionAttributesSerializer */
+    private $extensionAttributesSerializer;
+
     public function __construct(
         OrderBillingAddressSerializer $billingAddressSerializer,
         PaymentSerializer $paymentSerializer,
-        OrderItemsSerializer $orderItemsSerializer
+        OrderItemsSerializer $orderItemsSerializer,
+        OrderExtensionAttributesSerializer $extensionAttributesSerializer
     )
     {
         $this->billingAddressSerializer = $billingAddressSerializer;
         $this->paymentSerializer = $paymentSerializer;
         $this->orderItemsSerializer = $orderItemsSerializer;
+        $this->extensionAttributesSerializer = $extensionAttributesSerializer;
     }
 
     /**
@@ -111,7 +116,7 @@ class OrderSerializer
             'weight' => $order->getWeight(),
             'billing_address' => $this->billingAddressSerializer->toArray($order->getBillingAddress()),
             'payment' => $this->paymentSerializer->toArray($order->getPayment()),
-            'extension_attributes' => $order->getExtensionAttributes()->__toArray(),
+            'extension_attributes' => $this->extensionAttributesSerializer->toArray($order->getExtensionAttributes()),
             'items' => $this->orderItemsSerializer->toArray($order->getItems())
         ];
     }

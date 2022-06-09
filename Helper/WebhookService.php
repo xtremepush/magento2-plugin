@@ -52,12 +52,12 @@ class WebhookService extends AbstractHelper
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_CUSTOMREQUEST => 'POST',
             CURLOPT_POSTFIELDS => $payload,
-            CURLOPT_HTTPHEADER => array(
+            CURLOPT_HTTPHEADER => [
                 'Content-Type: application/json',
                 'X-Api-Token: ' . $this->config->getXpAccessToken(),
                 'Content-Length: ' . strlen($payload),
                 'Topic: ' . $event
-            ),
+            ],
         ]);
 
         $response = curl_exec($curl);

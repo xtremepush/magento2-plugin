@@ -12,13 +12,18 @@ class CustomerSerializer
     /** @var CustomerAddressesSerializer */
     private $addressesSerializer;
 
+     /** @var CustomerExtensionAttributesSerializer */
+    private $extensionAttributesSerializer;
+
     public function __construct(
         CustomerCustomAttributesSerializer $customAttributesSerializer,
-        CustomerAddressesSerializer $addressesSerializer
+        CustomerAddressesSerializer $addressesSerializer,
+        CustomerExtensionAttributesSerializer $extensionAttributesSerializer
     )
     {
         $this->customAttributesSerializer = $customAttributesSerializer;
         $this->addressesSerializer = $addressesSerializer;
+        $this->extensionAttributesSerializer = $extensionAttributesSerializer;
     }
 
     public function toArray(CustomerInterface $customer)
@@ -40,7 +45,7 @@ class CustomerSerializer
             'website_id' => $customer->getWebsiteId(),
             'addresses' => $this->addressesSerializer->toArray($customer->getAddresses()),
             'disable_auto_group_change' => $customer->getDisableAutoGroupChange(),
-            'extension_attributes' => $customer->getExtensionAttributes()->__toArray(),
+            'extension_attributes' => $this->extensionAttributesSerializer->toArray($customer->getExtensionAttributes()),
             'custom_attributes' => $this->customAttributesSerializer->toArray($customer->getCustomAttributes())
         ];
     }

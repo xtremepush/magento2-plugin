@@ -15,7 +15,7 @@ class CustomerAddressesSerializer
         $data = [];
 
         foreach ($addresses ?? [] as $address) {
-            return [
+            $data[] = [
                 'id' => $address->getId(),
                 'customer_id' => $address->getCustomerId(),
                 'region' => $address->getRegion(),

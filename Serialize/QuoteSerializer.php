@@ -31,7 +31,7 @@ class QuoteSerializer
      */
     public function toArray(CartInterface $quote)
     {
-        $data = [
+        return [
             'id' => $quote->getId(),
             'created_at' => $quote->getCreatedAt(),
             'updated_at' => $quote->getUpdatedAt(),
@@ -49,7 +49,5 @@ class QuoteSerializer
             'customer_tax_class_id' => $quote->getCustomerTaxClassId(),
             'store_id' => $quote->getStoreId()
         ];
-
-        return $data;
     }
 }

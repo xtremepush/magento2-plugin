@@ -1,6 +1,6 @@
 <?php
 
-namespace xtremepush\module\Observer;
+namespace Xtremepush\Module\Observer;
 
 use Magento\Backend\Model\Auth\Session;
 use Magento\Framework\Event\ObserverInterface;
@@ -23,7 +23,7 @@ abstract class AbstractObserver implements ObserverInterface
     /** @var ModuleConfig */
     protected $config;
 
-   public function __construct(
+    public function __construct(
         LoggerInterface $logger,
         WebhookService $webhookService,
         Session $authSession,

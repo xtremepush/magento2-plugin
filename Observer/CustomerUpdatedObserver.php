@@ -1,6 +1,6 @@
 <?php
 
-namespace xtremepush\module\Observer;
+namespace Xtremepush\Module\Observer;
 
 use Magento\Backend\Model\Auth\Session;
 use Magento\Framework\Event\Observer;
