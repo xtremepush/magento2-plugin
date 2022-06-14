@@ -5,7 +5,7 @@ namespace Xtremepush\Module\Observer;
 use Magento\Backend\Model\Auth\Session;
 use Magento\Framework\Event\ObserverInterface;
 use Psr\Log\LoggerInterface;
-use xtremepush\module\Helper\WebhookService;
+use Xtremepush\Module\Helper\WebhookService;
 use Xtremepush\Module\Model\Event;
 use Xtremepush\Module\Model\ModuleConfig;
 

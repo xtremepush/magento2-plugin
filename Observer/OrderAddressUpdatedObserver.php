@@ -6,7 +6,7 @@ use Magento\Backend\Model\Auth\Session;
 use Magento\Framework\Event\Observer;
 use Magento\Sales\Api\OrderRepositoryInterface;
 use Psr\Log\LoggerInterface;
-use xtremepush\module\Helper\WebhookService;
+use Xtremepush\Module\Helper\WebhookService;
 use Xtremepush\Module\Model\Event;
 use Xtremepush\Module\Model\ModuleConfig;
 use Xtremepush\Module\Serialize\OrderSerializer;

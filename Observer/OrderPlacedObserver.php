@@ -3,11 +3,11 @@
 namespace Xtremepush\Module\Observer;
 
 use Magento\Framework\Event\Observer;
-use xtremepush\module\Model\Event;
+use Xtremepush\Module\Model\Event;
 use Xtremepush\Module\Serialize\OrderSerializer;
 use Magento\Backend\Model\Auth\Session;
 use Psr\Log\LoggerInterface;
-use xtremepush\module\Helper\WebhookService;
+use Xtremepush\Module\Helper\WebhookService;
 use Xtremepush\Module\Model\ModuleConfig;
 use Magento\Quote\Api\CartRepositoryInterface;
 use Xtremepush\Module\Serialize\QuoteSerializer;
