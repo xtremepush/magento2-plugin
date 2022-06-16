@@ -64,7 +64,7 @@ class WebhookService extends AbstractHelper
         $err = curl_errno($curl);
 
         if ($err) {
-            $this->_logger->warning(sprintf('Xtremepush: Unable to send webhook to %s with data: %s', $url, $payload));
+            $this->_logger->warning(sprintf('Xtremepush: Unable to send webhook with topic "%s" to %s with data: %s', $event, $url, $payload));
         }
 
         curl_close($curl);

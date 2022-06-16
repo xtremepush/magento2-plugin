@@ -14,17 +14,14 @@
         <observer name="xtremepush_module_observer_orderaddressupdated" instance="Xtremepush\Module\Observer\OrderAddressUpdatedObserver" />
     </event>
 
-    <event name="customer_account_edited">
-        <observer name="xtremepush_module_observer_customeredited" instance="Xtremepush\Module\Observer\CustomerUpdatedObserver" />
-    </event>
-    <event name="customer_register_success">
-        <observer name="xtremepush_module_observer_customerregistered" instance="Xtremepush\Module\Observer\CustomerRegisteredObserver" />
-    </event>
     <event name="customer_delete_after">
         <observer name="xtremepush_module_observer_customerdeleted" instance="Xtremepush\Module\Observer\CustomerDeletedObserver" />
     </event>
-    <event name="adminhtml_customer_save_after">
-        <observer name="xtremepush_module_observer_customersaved" instance="Xtremepush\Module\Observer\CustomerSavedObserver" />
+    <event name="customer_save_before">
+        <observer name="xtremepush_module_observer_customersavedbefore" instance="Xtremepush\Module\Observer\CustomerSavedBeforeObserver" />
+    </event>
+    <event name="customer_save_after">
+        <observer name="xtremepush_module_observer_customersavedafter" instance="Xtremepush\Module\Observer\CustomerSavedAfterObserver" />
     </event>
     <event name="newsletter_subscriber_save_after">
         <observer name="xtremepush_module_observer_newslettersaved" instance="Xtremepush\Module\Observer\NewsletterSavedObserver" />

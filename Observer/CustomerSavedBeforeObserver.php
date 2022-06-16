@@ -3,26 +3,25 @@
 namespace Xtremepush\Module\Observer;
 
 use Magento\Backend\Model\Auth\Session;
+use Magento\Customer\Model\Session as CustomerSession;
 use Magento\Framework\Event\Observer;
 use Psr\Log\LoggerInterface;
 use Xtremepush\Module\Helper\WebhookService;
-use Xtremepush\Module\Model\Event;
 use Xtremepush\Module\Model\ModuleConfig;
-use Xtremepush\Module\Serialize\CustomerSerializer;
 
-class CustomerSavedObserver extends AbstractObserver
+class CustomerSavedBeforeObserver extends AbstractObserver
 {
-    /** @var CustomerSerializer */
-    private $customerSerializer;
+    /** @var CustomerSession */
+    private $customerSession;
 
     public function __construct(
         LoggerInterface $logger,
         WebhookService $webhookService,
         Session $authSession,
         ModuleConfig $config,
-        CustomerSerializer $customerSerializer
+        CustomerSession $customerSession
     ) {
-        $this->customerSerializer = $customerSerializer;
+        $this->customerSession = $customerSession;
         parent::__construct($logger, $webhookService, $authSession, $config);
     }
 
@@ -32,11 +31,7 @@ class CustomerSavedObserver extends AbstractObserver
             return $this;
         }
 
-        $event = Event::EVENT_ADMIN_CUSTOMER_CREATED;
-        if ($this->isWebhookEnabled($event)) {
-            $this->webhookService->sendWebhook($event, $this->customerSerializer->toArray($customer));
-        }
-
+        $this->customerSession->setIsCustomerNew((bool)$customer->isObjectNew());
         return $this;
     }
 }

@@ -29,7 +29,7 @@ class Event
 
     /* customer events */
     public const EVENT_CUSTOMER_CUSTOMER_REGISTERED = 'customer/customer/registered';
-    public const EVENT_ADMIN_CUSTOMER_CREATED = 'admin/customer/saved';
+    public const EVENT_ADMIN_CUSTOMER_CREATED = 'admin/customer/created';
     public const EVENT_CUSTOMER_CUSTOMER_UPDATED = 'customer/customer/updated';
     public const EVENT_ADMIN_CUSTOMER_UPDATED = 'admin/customer/updated';
     public const EVENT_ADMIN_CUSTOMER_DELETED = 'admin/customer/deleted';
