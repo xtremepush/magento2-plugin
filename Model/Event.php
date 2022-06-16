@@ -23,7 +23,7 @@ class Event
     public const EVENT_ORDER_STATE_PROCESSING = 'admin/order/state/processing';
     public const EVENT_ORDER_STATE_COMPLETE = 'admin/order/state/complete';
     public const EVENT_ORDER_STATE_CLOSED = 'admin/order/state/closed';
-    public const EVENT_ORDER_STATE_CANCELED = 'admin/order/state/canceled';
+    public const EVENT_ORDER_STATE_CANCELED = 'admin/order/state/cancelled';
     public const EVENT_ORDER_STATE_HOLDED = 'admin/order/state/holded';
     public const EVENT_ORDER_STATE_PAYMENT_REVIEW = 'admin/order/state/payment_review';
 
