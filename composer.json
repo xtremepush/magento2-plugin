@@ -3,6 +3,11 @@
     "description": "Xtremepush extension for Magento 2",
     "type": "magento2-module",
     "verion": "0.0.1",
+    "require":
+    {
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
     "autoload": {
         "files": [
             "registration.php"

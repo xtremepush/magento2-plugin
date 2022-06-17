@@ -9,13 +9,21 @@ use Magento\Framework\App\Cache\Frontend\Pool;
 
 class ModuleConfig
 {
-    private const PREFIX = 'xtremepush_config/';
+    private const PREFIX_GENERAL = 'xtremepush_config/';
+    private const PREFIX_WEBHOOKS = 'xtremepush_webhooks/';
+
     private const GROUP_GENERAL = 'general/';
+    private const GROUP_WEBHOOKS = 'webhooks/';
+
     private const FIELD_XP_WEBHOOK_URL = 'xp_webhook_url';
     private const FIELD_XP_PROJECT_TITLE = 'xp_project_title';
     private const FIELD_XP_ACCESS_TOKEN = 'xp_access_token';
     private const FIELD_XP_ACTIVE = 'xp_active';
     private const DOCUMENTATION_URL = 'documentation_url';
+
+    public const WEBHOOK_QUOTES = 'webhook_quotes';
+    public const WEBHOOK_ORDERS = 'webhook_orders';
+    public const WEBHOOK_CUSTOMERS = 'webhook_customers';
 
     /** @var ScopeConfigInterface */
     private $scopeConfig;
@@ -47,7 +55,7 @@ class ModuleConfig
      */
     public function setXpActive(bool $value)
     {
-        $this->configWriter->save(self::PREFIX . self::GROUP_GENERAL . self::FIELD_XP_ACTIVE, $value);
+        $this->configWriter->save(self::PREFIX_GENERAL . self::GROUP_GENERAL . self::FIELD_XP_ACTIVE, $value);
     }
 
     /**
@@ -56,7 +64,7 @@ class ModuleConfig
      */
     public function setXpProjectTitle(string $value)
     {
-        $this->configWriter->save(self::PREFIX . self::GROUP_GENERAL . self::FIELD_XP_PROJECT_TITLE, $value);
+        $this->configWriter->save(self::PREFIX_GENERAL . self::GROUP_GENERAL . self::FIELD_XP_PROJECT_TITLE, $value);
     }
 
     /**
@@ -65,7 +73,7 @@ class ModuleConfig
      */
     public function setXpWebhookUrl(string $value)
     {
-        $this->configWriter->save(self::PREFIX . self::GROUP_GENERAL . self::FIELD_XP_WEBHOOK_URL, $value);
+        $this->configWriter->save(self::PREFIX_GENERAL . self::GROUP_GENERAL . self::FIELD_XP_WEBHOOK_URL, $value);
     }
 
     /**
@@ -74,15 +82,15 @@ class ModuleConfig
      */
     public function setXpAccessToken(string $value)
     {
-        $this->configWriter->save(self::PREFIX . self::GROUP_GENERAL . self::FIELD_XP_ACCESS_TOKEN, $value);
+        $this->configWriter->save(self::PREFIX_GENERAL . self::GROUP_GENERAL . self::FIELD_XP_ACCESS_TOKEN, $value);
     }
 
     /**
-     * @return string|null
+     * @return bool
      */
     public function getXpActive()
     {
-        return $this->scopeConfig->getValue(self::PREFIX . self::GROUP_GENERAL . self::FIELD_XP_ACTIVE);
+        return (bool)$this->scopeConfig->getValue(self::PREFIX_GENERAL . self::GROUP_GENERAL . self::FIELD_XP_ACTIVE);
     }
 
     /**
@@ -90,7 +98,7 @@ class ModuleConfig
      */
     public function getXpAccessToken()
     {
-        return $this->scopeConfig->getValue(self::PREFIX . self::GROUP_GENERAL . self::FIELD_XP_ACCESS_TOKEN);
+        return $this->scopeConfig->getValue(self::PREFIX_GENERAL . self::GROUP_GENERAL . self::FIELD_XP_ACCESS_TOKEN);
     }
 
     /**
@@ -98,7 +106,7 @@ class ModuleConfig
      */
     public function getXpWebhookUrl()
     {
-        return $this->scopeConfig->getValue(self::PREFIX . self::GROUP_GENERAL . self::FIELD_XP_WEBHOOK_URL);
+        return $this->scopeConfig->getValue(self::PREFIX_GENERAL . self::GROUP_GENERAL . self::FIELD_XP_WEBHOOK_URL);
     }
 
     /**
@@ -106,7 +114,7 @@ class ModuleConfig
      */
     public function getXpProjectTitle()
     {
-        return $this->scopeConfig->getValue(self::PREFIX . self::GROUP_GENERAL . self::FIELD_XP_PROJECT_TITLE);
+        return $this->scopeConfig->getValue(self::PREFIX_GENERAL . self::GROUP_GENERAL . self::FIELD_XP_PROJECT_TITLE);
     }
 
     /**
@@ -114,7 +122,15 @@ class ModuleConfig
      */
     public function getDocumentationUrl()
     {
-        return $this->scopeConfig->getValue(self::PREFIX . self::GROUP_GENERAL . self::DOCUMENTATION_URL);
+        return $this->scopeConfig->getValue(self::PREFIX_GENERAL . self::GROUP_GENERAL . self::DOCUMENTATION_URL);
+    }
+
+    /**
+     * @return bool
+     */
+    public function getWebhookSetting(string $webhook)
+    {
+        return (bool)$this->scopeConfig->getValue(self::PREFIX_WEBHOOKS . self::GROUP_WEBHOOKS . $webhook);
     }
 
     /**
