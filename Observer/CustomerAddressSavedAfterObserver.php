@@ -41,8 +41,8 @@ class CustomerAddressSavedAfterObserver extends AbstractObserver
         }
 
         $addresses = $customer->getAddresses();
+        $customer = $this->customerSerializer->toArray($customer->getDataModel());
         if (empty($addresses)) {
-            $customer = $this->customerSerializer->toArray($customer->getDataModel());
             $address = $address->getData();
             $customer['addresses'][] = $this->addressesSerializer->remapArray($address);
             if ($address['is_default_billing'] == '1') {
