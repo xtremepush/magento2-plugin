@@ -23,6 +23,9 @@
     <event name="customer_save_after">
         <observer name="xtremepush_module_observer_customersavedafter" instance="Xtremepush\Module\Observer\CustomerSavedAfterObserver" />
     </event>
+    <event name="customer_address_save_after">
+        <observer name="xtremepush_module_observer_customeraddresssavedafter" instance="Xtremepush\Module\Observer\CustomerAddressSavedAfterObserver" />
+    </event>
     <event name="newsletter_subscriber_save_after">
         <observer name="xtremepush_module_observer_newslettersaved" instance="Xtremepush\Module\Observer\NewsletterSavedObserver" />
     </event>
