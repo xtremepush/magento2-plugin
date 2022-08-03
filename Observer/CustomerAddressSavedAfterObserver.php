@@ -3,6 +3,7 @@
 namespace Xtremepush\Module\Observer;
 
 use Magento\Backend\Model\Auth\Session;
+use Magento\Customer\Model\Address;
 use Magento\Framework\Event\Observer;
 use Psr\Log\LoggerInterface;
 use Xtremepush\Module\Helper\WebhookService;
@@ -34,7 +35,7 @@ class CustomerAddressSavedAfterObserver extends AbstractObserver
 
     public function execute(Observer $observer)
     {
-        /** @var \Magento\Customer\Model\Address $address */
+        /** @var Address $address */
         $address = $observer->getData('customer_address');
         if (!$address || $this->isAdmin() || !$customer = $address->getCustomer()) {
             return $this;
