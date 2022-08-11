@@ -6,6 +6,6 @@ pipelines:
         - step:
             script:
             - git remote add sync git@github.com:xtremepush/magento2-plugin.git
-            - git checkout release
+            - git checkout release/github
             - git pull    
             - git push sync master
