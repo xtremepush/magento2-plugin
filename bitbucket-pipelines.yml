@@ -9,4 +9,4 @@ pipelines:
             - git checkout release/github
             - git pull
             - git commit -m "upstream release"
-            - git push sync master
+            - git push sync release/github:master
