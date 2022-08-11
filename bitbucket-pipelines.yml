@@ -8,4 +8,4 @@ pipelines:
             - git remote add sync git@github.com:xtremepush/magento2-plugin.git
             - git checkout release/github
             - git pull
-            - git push sync release/github:master
+            - git push -f sync release/github:master
