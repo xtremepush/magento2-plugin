@@ -2,7 +2,7 @@ image: atlassian/default-image:3
 
 pipelines:
     branches:
-      release:
+      release/github:
         - step:
             script:
             - git remote add sync git@github.com:xtremepush/magento2-plugin.git
