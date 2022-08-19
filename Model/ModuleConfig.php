@@ -1,6 +1,6 @@
 <?php
 
-namespace Xtremepush\Module\Model;
+namespace Xtremepush\Core\Model;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\Config\Storage\WriterInterface;

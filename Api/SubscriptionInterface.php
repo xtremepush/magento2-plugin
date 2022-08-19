@@ -1,6 +1,6 @@
 <?php
 
-namespace Xtremepush\Module\Api;
+namespace Xtremepush\Core\Api;
 
 interface SubscriptionInterface
 {

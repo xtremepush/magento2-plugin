@@ -10,33 +10,33 @@
             <class>separator-top</class>
             <label>General</label>
             <tab>xtremepush</tab>
-            <resource>Xtremepush_Module::xtremepush_general_config</resource>
+            <resource>Xtremepush_Core::xtremepush_general_config</resource>
             <group id="general" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1"
                    showInStore="1">
                 <label>Xtremepush Settings</label>
                 <field id="Instruction" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <frontend_model>Xtremepush\Module\Block\Adminhtml\System\Config\Instructions</frontend_model>
+                    <frontend_model>Xtremepush\Core\Block\Adminhtml\System\Config\Instructions</frontend_model>
                 </field>
                 <field id="xp_project_title" translate="label" type="text" sortOrder="20" showInDefault="1"
                        showInWebsite="0" showInStore="0">
                     <label>Xtremepush Project Title</label>
-                    <frontend_model>Xtremepush\Module\Block\Adminhtml\System\Config\Form\Field\Disable</frontend_model>
+                    <frontend_model>Xtremepush\Core\Block\Adminhtml\System\Config\Form\Field\Disable</frontend_model>
                 </field>
                 <field id="xp_access_token" translate="label" type="text" sortOrder="20" showInDefault="1"
                        showInWebsite="0" showInStore="0">
                     <label>Xtremepush Integration Access Token</label>
-                    <frontend_model>Xtremepush\Module\Block\Adminhtml\System\Config\Form\Field\Disable</frontend_model>
+                    <frontend_model>Xtremepush\Core\Block\Adminhtml\System\Config\Form\Field\Disable</frontend_model>
                 </field>
                 <field id="xp_webhook_url" translate="label" type="text" sortOrder="20" showInDefault="1"
                        showInWebsite="0" showInStore="0">
                     <label>Xtremepush Webhook URL</label>
-                    <frontend_model>Xtremepush\Module\Block\Adminhtml\System\Config\Form\Field\Disable</frontend_model>
+                    <frontend_model>Xtremepush\Core\Block\Adminhtml\System\Config\Form\Field\Disable</frontend_model>
                 </field>
                 <field id="xp_active" type="select" translate="label comment" sortOrder="20" showInDefault="1"
                        showInWebsite="0" showInStore="0">
                     <label>Enable Integration</label>
                     <comment>Confirm settings are correct. This value will reset every time settings are changed</comment>
-                    <source_model>Xtremepush\Module\Block\Adminhtml\System\Config\Form\Field\Yesno</source_model>
+                    <source_model>Xtremepush\Core\Block\Adminhtml\System\Config\Form\Field\Yesno</source_model>
                 </field>
             </group>
         </section>
@@ -44,23 +44,23 @@
             <class>separator-top</class>
             <label>Webhooks</label>
             <tab>xtremepush</tab>
-            <resource>Xtremepush_Module::xtremepush_general_config</resource>
+            <resource>Xtremepush_Core::xtremepush_general_config</resource>
             <group id="webhooks" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
                 <label>Webhooks</label>
                 <field id="webhook_quotes" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Quotes</label>
                     <comment>Enable events for quote changes</comment>
-                    <source_model>Xtremepush\Module\Block\Adminhtml\System\Config\Form\Field\Yesno</source_model>
+                    <source_model>Xtremepush\Core\Block\Adminhtml\System\Config\Form\Field\Yesno</source_model>
                 </field>
                 <field id="webhook_orders" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Orders</label>
                     <comment>Enable events for order changes</comment>
-                    <source_model>Xtremepush\Module\Block\Adminhtml\System\Config\Form\Field\Yesno</source_model>
+                    <source_model>Xtremepush\Core\Block\Adminhtml\System\Config\Form\Field\Yesno</source_model>
                 </field>
                 <field id="webhook_customers" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Customers</label>
                     <comment>Enable events for customer changes</comment>
-                    <source_model>Xtremepush\Module\Block\Adminhtml\System\Config\Form\Field\Yesno</source_model>
+                    <source_model>Xtremepush\Core\Block\Adminhtml\System\Config\Form\Field\Yesno</source_model>
                 </field>
             </group>
         </section>

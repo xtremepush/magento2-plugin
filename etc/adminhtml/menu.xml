@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Xtremepush_Module::content"
+        <add id="Xtremepush_Core::content"
              title="Xtremepush"
-             module="Xtremepush_Module"
+             module="Xtremepush_Core"
              sortOrder="20"
-             resource="Xtremepush_Module::content" />
-        <add id="Xtremepush_Module::xtremepush_settings"
+             resource="Xtremepush_Core::content" />
+        <add id="Xtremepush_Core::xtremepush_settings"
              title="Settings"
-             module="Xtremepush_Module"
+             module="Xtremepush_Core"
              sortOrder="10"
              action="adminhtml/system_config/edit/section/xtremepush_config"
-             parent="Xtremepush_Module::content"
-             resource="Xtremepush_Module::content" />
+             parent="Xtremepush_Core::content"
+             resource="Xtremepush_Core::content" />
     </menu>
 </config>

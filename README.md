@@ -30,7 +30,7 @@ Use Xtremepush messaging capabilities with Magento
 - Rename `lib-xp-magento2` directory to `Module`
 - Inside root directory execute command `sudo php -d memory_limit=-1 bin/magento setup:upgrade`
 - After that execute UI update command `sudo php bin/magento setup:static-content:deploy -f`
-- Module has been installed if `Xtremepush_Module` is listed in `/app/etc/config.php`
+- Module has been installed if `Xtremepush_Core` is listed in `/app/etc/config.php`
 
 ## Required Magento permissions:
 - Magento_Integration::integrations (System > System Extensions > System Integrations)
