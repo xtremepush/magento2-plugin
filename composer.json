@@ -15,7 +15,7 @@
     "require":
     {
         "php": ">=7.3",
-        "magento/framework": ">=100.0.1",
+        "magento/community-edition": ">=2.4.2",
         "ext-curl": "*",
         "ext-json": "*"
     },
@@ -28,6 +28,11 @@
         }
     },
     "config": {
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "laminas/laminas-dependency-plugin": true,
+            "magento/magento-composer-installer": true,
+            "magento/composer-dependency-version-audit-plugin": true
+        }
     }
 }
