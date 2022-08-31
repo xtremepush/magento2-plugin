@@ -28,11 +28,6 @@
         }
     },
     "config": {
-        "optimize-autoloader": true,
-        "allow-plugins": {
-            "laminas/laminas-dependency-plugin": true,
-            "magento/magento-composer-installer": true,
-            "magento/composer-dependency-version-audit-plugin": true
-        }
+        "optimize-autoloader": true
     }
 }
