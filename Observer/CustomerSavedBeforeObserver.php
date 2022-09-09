@@ -1,13 +1,13 @@
 <?php
 
-namespace Xtremepush\Module\Observer;
+namespace Xtremepush\Core\Observer;
 
 use Magento\Backend\Model\Auth\Session;
 use Magento\Customer\Model\Session as CustomerSession;
 use Magento\Framework\Event\Observer;
 use Psr\Log\LoggerInterface;
-use Xtremepush\Module\Helper\WebhookService;
-use Xtremepush\Module\Model\ModuleConfig;
+use Xtremepush\Core\Helper\WebhookService;
+use Xtremepush\Core\Model\ModuleConfig;
 
 class CustomerSavedBeforeObserver extends AbstractObserver
 {

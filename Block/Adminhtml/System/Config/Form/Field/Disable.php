@@ -1,6 +1,6 @@
 <?php
 
-namespace Xtremepush\Module\Block\Adminhtml\System\Config\Form\Field;
+namespace Xtremepush\Core\Block\Adminhtml\System\Config\Form\Field;
 
 use Magento\Config\Block\System\Config\Form\Field;
 use Magento\Framework\Data\Form\Element\AbstractElement;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Xtremepush\Module\Block\Adminhtml\System\Config;
+namespace Xtremepush\Core\Block\Adminhtml\System\Config;
 
 use Magento\Backend\Block\Template\Context;
 use Magento\Config\Block\System\Config\Form\Field;
 use Magento\Framework\Data\Form\Element\AbstractElement;
-use Xtremepush\Module\Model\ModuleConfig;
+use Xtremepush\Core\Model\ModuleConfig;
 
 class Instructions extends Field
 {

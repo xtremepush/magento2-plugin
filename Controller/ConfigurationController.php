@@ -1,9 +1,9 @@
 <?php
 
-namespace Xtremepush\Module\Controller;
+namespace Xtremepush\Core\Controller;
 
-use Xtremepush\Module\Api\ConfigurationInterface;
-use Xtremepush\Module\Model\ModuleConfig;
+use Xtremepush\Core\Api\ConfigurationInterface;
+use Xtremepush\Core\Model\ModuleConfig;
 
 class ConfigurationController implements ConfigurationInterface
 {

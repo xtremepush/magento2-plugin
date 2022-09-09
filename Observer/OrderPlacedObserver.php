@@ -1,16 +1,16 @@
 <?php
 
-namespace Xtremepush\Module\Observer;
+namespace Xtremepush\Core\Observer;
 
 use Magento\Framework\Event\Observer;
-use Xtremepush\Module\Model\Event;
-use Xtremepush\Module\Serialize\OrderSerializer;
+use Xtremepush\Core\Model\Event;
+use Xtremepush\Core\Serialize\OrderSerializer;
 use Magento\Backend\Model\Auth\Session;
 use Psr\Log\LoggerInterface;
-use Xtremepush\Module\Helper\WebhookService;
-use Xtremepush\Module\Model\ModuleConfig;
+use Xtremepush\Core\Helper\WebhookService;
+use Xtremepush\Core\Model\ModuleConfig;
 use Magento\Quote\Api\CartRepositoryInterface;
-use Xtremepush\Module\Serialize\QuoteSerializer;
+use Xtremepush\Core\Serialize\QuoteSerializer;
 
 class OrderPlacedObserver extends AbstractObserver
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Xtremepush\Module\Observer;
+namespace Xtremepush\Core\Observer;
 
 use Magento\Backend\Model\Auth\Session;
 use Magento\Framework\Event\Observer;
 use Psr\Log\LoggerInterface;
-use Xtremepush\Module\Helper\WebhookService;
-use Xtremepush\Module\Model\Event;
-use Xtremepush\Module\Model\ModuleConfig;
-use Xtremepush\Module\Serialize\OrderSerializer;
+use Xtremepush\Core\Helper\WebhookService;
+use Xtremepush\Core\Model\Event;
+use Xtremepush\Core\Model\ModuleConfig;
+use Xtremepush\Core\Serialize\OrderSerializer;
 
 class OrderSavedObserver extends AbstractObserver
 {
