@@ -1,17 +1,22 @@
 {
-    "name": "xtremepush/magento2-core-plugin",
+    "name": "xtremepush/magento2-plugin",
     "description": "Xtremepush extension for Magento 2",
     "type": "magento2-module",
-    "version": "1.0.0",
+    "keywords": [
+        "xtremepush",
+        "magento",
+        "xp"
+    ],
     "authors": [
         {
             "name": "Xtremepush",
             "homepage": "https://www.xtremepush.com/"
         }
     ],
-    "license": [
-        "proprietary"
-    ],
+    "support": {
+        "docs": "https://docs.xtremepush.com/docs/magento-2"
+    },
+    "license": "proprietary",
     "require":
     {
         "php": ">=7.1.3",
