@@ -1,11 +1,11 @@
 <?php
 
-namespace Xtremepush\Module\Model;
+namespace Xtremepush\Core\Model;
 
 use Magento\Customer\Model\ResourceModel\Customer\CollectionFactory as CustomerFactory;
 use Magento\Framework\Exception\NotFoundException;
 use Magento\Newsletter\Model\SubscriptionManager;
-use Xtremepush\Module\Api\SubscriptionInterface;
+use Xtremepush\Core\Api\SubscriptionInterface;
 
 class Subscription implements SubscriptionInterface
 {

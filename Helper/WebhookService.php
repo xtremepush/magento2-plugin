@@ -1,10 +1,10 @@
 <?php
 
-namespace Xtremepush\Module\Helper;
+namespace Xtremepush\Core\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Framework\App\Helper\Context;
-use Xtremepush\Module\Model\ModuleConfig;
+use Xtremepush\Core\Model\ModuleConfig;
 use Psr\Log\LoggerInterface;
 use Magento\Framework\Serialize\SerializerInterface;
 

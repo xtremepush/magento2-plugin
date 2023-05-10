@@ -1,6 +1,6 @@
 <?php
 
-namespace Xtremepush\Module\Model;
+namespace Xtremepush\Core\Model;
 
 use Magento\Sales\Model\Order;
 

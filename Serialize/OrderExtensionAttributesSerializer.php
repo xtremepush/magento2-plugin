@@ -1,6 +1,6 @@
 <?php
 
-namespace Xtremepush\Module\Serialize;
+namespace Xtremepush\Core\Serialize;
 
 use Magento\Sales\Api\Data\OrderExtensionInterface;
 

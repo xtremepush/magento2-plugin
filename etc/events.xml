@@ -1,32 +1,32 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="checkout_cart_save_after">
-        <observer name="xtremepush_module_observer_checkoutupdated" instance="Xtremepush\Module\Observer\CheckoutCartSavedObserver" />
+        <observer name="xtremepush_core_observer_checkoutupdated" instance="Xtremepush\Core\Observer\CheckoutCartSavedObserver" />
     </event>
 
     <event name="sales_order_place_after">
-        <observer name="xtremepush_module_observer_orderplaced" instance="Xtremepush\Module\Observer\OrderPlacedObserver" />
+        <observer name="xtremepush_core_observer_orderplaced" instance="Xtremepush\Core\Observer\OrderPlacedObserver" />
     </event>
     <event name="sales_order_save_after">
-        <observer name="xtremepush_module_observer_ordersaved" instance="Xtremepush\Module\Observer\OrderSavedObserver" />
+        <observer name="xtremepush_core_observer_ordersaved" instance="Xtremepush\Core\Observer\OrderSavedObserver" />
     </event>
     <event name="admin_sales_order_address_update">
-        <observer name="xtremepush_module_observer_orderaddressupdated" instance="Xtremepush\Module\Observer\OrderAddressUpdatedObserver" />
+        <observer name="xtremepush_core_observer_orderaddressupdated" instance="Xtremepush\Core\Observer\OrderAddressUpdatedObserver" />
     </event>
 
     <event name="customer_delete_after">
-        <observer name="xtremepush_module_observer_customerdeleted" instance="Xtremepush\Module\Observer\CustomerDeletedObserver" />
+        <observer name="xtremepush_core_observer_customerdeleted" instance="Xtremepush\Core\Observer\CustomerDeletedObserver" />
     </event>
     <event name="customer_save_before">
-        <observer name="xtremepush_module_observer_customersavedbefore" instance="Xtremepush\Module\Observer\CustomerSavedBeforeObserver" />
+        <observer name="xtremepush_core_observer_customersavedbefore" instance="Xtremepush\Core\Observer\CustomerSavedBeforeObserver" />
     </event>
     <event name="customer_save_after">
-        <observer name="xtremepush_module_observer_customersavedafter" instance="Xtremepush\Module\Observer\CustomerSavedAfterObserver" />
+        <observer name="xtremepush_core_observer_customersavedafter" instance="Xtremepush\Core\Observer\CustomerSavedAfterObserver" />
     </event>
     <event name="customer_address_save_after">
-        <observer name="xtremepush_module_observer_customeraddresssavedafter" instance="Xtremepush\Module\Observer\CustomerAddressSavedAfterObserver" />
+        <observer name="xtremepush_core_observer_customeraddresssavedafter" instance="Xtremepush\Core\Observer\CustomerAddressSavedAfterObserver" />
     </event>
     <event name="newsletter_subscriber_save_after">
-        <observer name="xtremepush_module_observer_newslettersaved" instance="Xtremepush\Module\Observer\NewsletterSavedObserver" />
+        <observer name="xtremepush_core_observer_newslettersaved" instance="Xtremepush\Core\Observer\NewsletterSavedObserver" />
     </event>
 </config>

@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
-    <route url="/V1/xtremepush-module/configure" method="POST">
-        <service class="Xtremepush\Module\Api\ConfigurationInterface" method="configure"/>
+    <route url="/V1/xtremepush/configure" method="POST">
+        <service class="Xtremepush\Core\Api\ConfigurationInterface" method="configure"/>
         <resources>
             <resource ref="Magento_Integration::integrations"/>
         </resources>
     </route>
     <route method="PUT" url="/V1/xtremepush/customer/:customer_id/subscriptionStatus">
-        <service class="Xtremepush\Module\Api\SubscriptionInterface" method="handleSubscriptionStatus"/>
+        <service class="Xtremepush\Core\Api\SubscriptionInterface" method="handleSubscriptionStatus"/>
         <resources>
             <resource ref="Magento_Newsletter::subscriber"/>
         </resources>
